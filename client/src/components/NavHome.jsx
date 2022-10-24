@@ -52,12 +52,12 @@ function NavHome( ) {
                       <button className={styles.link}>Create Gender</button>
                 </Link>
                 <select className={styles.abc} onChange={(e)=>handleAlphabetic(e)}>
-                    <option>AscDesc</option>
+                    <option>Order By Alphabet</option>
                     <option value="asc">Ascendente A to Z</option>
                     <option value="desc">Descendente Z to A</option>
                 </select> 
                 <select className={styles.abc} onChange={(e)=>handleAPIoBD(e)}>
-                    <option>ApiOrBd </option>
+                    <option>Filter by Api Or Bd </option>
                     <option value="filterApi">Filter for Api</option>
                     <option value="filterBD">Filter for Data Base</option>
                 </select> 

@@ -90,7 +90,7 @@ import {
                 case ORDER_BY_ALPHA: {
                   let orderedPokemons = [];
                   if (action.payload === "asc") {
-                          let orderedAToZ = state.videogames.sort((a, b) => {
+                          let orderedAToZ = state.videogames.slice().sort((a, b) => {
                             if (a.name > b.name) {
                               return 1;
                             }
@@ -103,7 +103,7 @@ import {
                           console.log("AaZ",orderedPokemons)
                         }
                   else if(action.payload==="desc")  {
-                          let orderedZToA = state.videogames.sort((a, b) => {
+                          let orderedZToA = state.videogames.slice().sort((a, b) => {
                             if (a.name > b.name) {
                               return -1;
                             }

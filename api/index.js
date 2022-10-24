@@ -1,28 +1,28 @@
-const express = require('express')
-const Stripe = require('stripe')
-const cors = require('cors')
+//                       _oo0oo_
+//                      o8888888o
+//                      88" . "88
+//                      (| -_- |)
+//                      0\  =  /0
+//                    ___/`---'\___
+//                  .' \\|     |// '.
+//                 / \\|||  :  |||// \
+//                / _||||| -:- |||||- \
+//               |   | \\\  -  /// |   |
+//               | \_|  ''\---/''  |_/ |
+//               \  .-\__  '-'  ___/-. /
+//             ___'. .'  /--.--\  `. .'___
+//          ."" '<  `.___\_<|>_/___.' >' "".
+//         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//         \  \ `_.   \_ __\ /__ _/   .-` /  /
+//     =====`-.____`.___ \_____/___.-`___.-'=====
+//                       `=---='
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const server = require('./src/app.js');
+const { conn } = require('./src/db.js');
 
-const app = express()
-
-const stripe = new Stripe("sk_test_51LUuaPGOqvRgizQ9MjapMBUmqYBnQzTuvRRkhH2vRh65om1regbCAn9dsvOIG61xxa9kbA8hnNk2NqozaQ91W1mA00ieJAWgCf")
-
-
-app.use(cors({origin: `http://localhost:3000`}))
-app.use(express.json())
-
-app.post('/api/checkout',  async (req,res) => {
-    const {id, amount} = req.body
-    const payment = await stripe.paymentIntents.create({
-        amount,
-        currency: "USD",
-        description: "Saxophone",
-        payment_method: id,
-        confirm: true,
-    })
-    console.log(payment)
-    res.send({message:'Successfull payment'})
-})
-
-app.listen(3001, ()=>{
-    console.log('Server on port 3001')
-})
+// Syncing all the models at once.
+conn.sync({ force: false }).then(() => {
+  server.listen(3001, () => {
+    console.log('%s listening at 3001'); // eslint-disable-line no-console
+  });
+});
