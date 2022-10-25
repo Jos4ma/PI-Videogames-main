@@ -13,7 +13,7 @@ export default function Card({id, name, image, genders}){
                 <Link to={`/detail/${id}`}>
                     <button className={style.button}>Videogame individual info</button>
                 </Link>
-                {id.length<14?<img src={image} alt="img not found" className={style.urlImg2} />:   
+                {id.length<14?<img src={image} alt="img not found" className={style.urlImg} />:   
                 <img src={image} alt="img not found" className={style.urlImg2} />}
         </div> 
     )

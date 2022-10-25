@@ -52,7 +52,6 @@ function NavHome( ) {
                       <button className={styles.link}>Create Gender</button>
                 </Link>
                 <select className={styles.abc} onChange={(e)=>handleAlphabetic(e)}>
-                    <option>Order By Alphabet</option>
                     <option value="asc">Ascendente A to Z</option>
                     <option value="desc">Descendente Z to A</option>
                 </select> 

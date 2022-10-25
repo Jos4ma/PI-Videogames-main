@@ -1,7 +1,8 @@
 .background {
     background: url("images/philosophy-of-videogames.jpg");
     width: 100%;
-    height: 1200px;
+    height: 1000px;
+    padding-bottom: 3cm;
     /* display: flex; */
     /* flex-direction: column;
     background-size: cover;
@@ -11,7 +12,6 @@
     border: 3px solid black;
     /* background-color: rgba(0, 0, 0, 0.824); */
     border-radius: 1px;
-    
   }
   
   /* .background {
@@ -24,29 +24,43 @@
       justify-content: center;
       
     } */
-  
+    .degradeFrame{
+      background: linear-gradient(transparent, rgb(49, 49, 9) );
+      margin: 4cm;
+      margin-top: 20px;
+      margin-left:10cm;
+      margin-right: 10cm;
+      padding: 0cm;
+      padding-bottom: 1cm;
+      justify-content: center;
+      align-items: center;   
+      align-self: center;
+      border: 5px solid rgba(0, 0, 0, 0.735);
+    }
+
     .frame {
       /* background: url("./wantan.jpg"); */
-      background: linear-gradient(transparent, rgb(205, 202, 50) );
+      background:  rgb(205, 202, 50) ;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 0,5cm;
       /* width: 45vw; */
       /* width: 50%;
       /* height: 65vh; */
       /* height: 84%;  */
       width: 50%;
       height: 80%;
-      justify-content: center;
-      align-items: center;   
-      align-self: center;
-      border: 5px solid rgba(0, 0, 0, 0.735);
       border-radius: 20px;
-      margin-top: 5%;
-  }
+      margin-top: 14px;
+      padding: 1cm;
+      padding-right: 5cm;
+      border: 5px solid rgba(0, 0, 0, 0.735);
+
+    }
   
-  .labelLink {
+  /* .labelLink {
     margin-right: auto;
-  }
+  } */
   
   .span {
     /* margin-left: auto; */
@@ -59,12 +73,12 @@
     /* background: rgba(70, 33, 10, 0.64); */
     text-align: center;
     width: 100%;
-    height: 6%;
+    height: 2%;
   }
   
   .title_create {
       /* position: relative; */
-      margin: auto;
+      margin-left: 2cm;
       font-size: larger;
       color: black;
       font-family: "Kanit", sans-serif;
@@ -73,7 +87,7 @@
       /* background: rgba(70, 33, 10, 0.64); */
       text-align: center;
       width: 100%;
-      height: 5%;
+      height: 2%;
     }
   
     .image{
@@ -89,11 +103,12 @@
   
     .form {
       color: rgb(8, 8, 8);
-      height: 100%;
-      padding: 25px 10px;
+      width: 12cm;
+      padding: 0px 10px;
       border-bottom: 4px solid transparent;
       font-style: oblique;
       font-size: 20px;
+      border: 5px solid rgba(0, 0, 0, 0.735);
       
     }
   
@@ -106,13 +121,12 @@
     }
   /* para correr las lineas un poco hacia la izquierda */
   .label{
-      font-size: 30px;
-      background: linear-gradient(transparent, rgb(213, 211, 49) );
-      font-weight: bolder;
+      font-size: 25px;
+      font-weight: normal;
       /* list-style-position:outside; */
       /* margin-top: 30px; */
       /* margin-right: 35%; */
-      margin-left: auto;
+      margin-left: 5px;
       /* width: 1000px; */
       height: 30px;
     }
@@ -129,6 +143,7 @@
     
     .buttonCreate {
       margin-top: 15px;
+      margin-bottom: 10px;
       cursor: pointer;
       border: none;
       border-radius: 20px 20px;
@@ -160,9 +175,10 @@
       font-family: "Kanit", sans-serif;
       font-weight: bolder;
       position: static;
-      left: 130px;
       justify-content: center;
-      font-size: large;  
+      font-size: large;
+      margin-left: 3cm;
+      margin-top:14px;  
       /* border-radius: 40px;
       display: flex;
       justify-content: center;

@@ -136,9 +136,10 @@ export default function CreateVideogame() {
   console.log("perro",genres)
   return (
     <div className={style.background}>
+      <div className={style.degradeFrame}>
       <div className={style.frame}>
       <div className={style.title_create}>
-        <h1>CREATE YOUR OWN VIDEOGAME</h1>
+        <h1>CREATE YOUR OWN VIDEOGAME CARD</h1>
       </div>
 
       <div className={style.dogCreate}>
@@ -195,7 +196,7 @@ export default function CreateVideogame() {
                 className={style.input}
                 onChange={(e) => handleInputChange(e)}
                 type="text"
-                name="description"
+                name="rating"
                 value={input.rating}
                 required
               />
@@ -306,6 +307,7 @@ export default function CreateVideogame() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
       </div>
     </div>
