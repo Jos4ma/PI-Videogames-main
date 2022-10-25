@@ -29,12 +29,17 @@ function handleDelete(e) {
   }
 console.log(videogameDetail.genders)
   return (
+    <div className={style.fondo}>
     <div className={style.detail}>
         {videogameDetail.id ? ( 
-            <div>
+            <div className={style.detail}>
+                <div className={style.title}><h2 className={style.h2}>Videogame name: {videogameDetail.name} </h2></div>
                 <div className={style.first}>
+                  <div className={style.boxPicture}>
                     <img className={style.img} src={videogameDetail.image} alt="Not Found" />        
-                    <h2 className={style.h2}>Videogame name: {videogameDetail.name} </h2>    
+                  </div>
+                  <div className={style.boxInfo}>
+                  <div className={style.order}>    
                     <h5 className={style.h5}>ID: {videogameDetail.id} </h5>        
                     <h5 className={style.h5}>RATING: {videogameDetail.rating} </h5>
                     <h5 className={style.h5}>RELEASED: {videogameDetail.released} </h5>
@@ -43,7 +48,7 @@ console.log(videogameDetail.genders)
                     ))}  */}
                     <h5 className={style.h5} >PLATFORMS RELATED: {videogameDetail.platforms}</h5>
                     <h5 className={style.h5}>GENRES: {videogameDetail.genders} </h5> 
-
+                  </div>
                     <Link to={"/home"}>
                         <button className={style.button}>HOME</button>
                     </Link>
@@ -51,16 +56,18 @@ console.log(videogameDetail.genders)
                         <button className={style.button}>DELETE POKEMON</button>
                     </Link> */}
                     {videogameDetail.id.length > 5 ? (
-                  <button className={style.button}  onClick={(e) => handleDelete(e)}>
+                    <button className={style.button}  onClick={(e) => handleDelete(e)}>
                       DELETE THIS VIDEOGAME
-                  </button>
-                ) : null}
-                </div>
+                    </button>
+                    ) : null}
+                    </div>
+                  </div>
                 
             </div>         
             ) : (
           <h1 className={style.h1}> Loading... </h1>
        ) }  
+    </div>
     </div>
   );
 }
