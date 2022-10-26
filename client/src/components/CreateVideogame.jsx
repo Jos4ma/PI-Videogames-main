@@ -274,14 +274,14 @@ export default function CreateVideogame() {
              */}
 
             <div>
-            {input.urlImg!==''? 
+            {/* {input.urlImg!==''? 
                (<img src={input.image} alt='new videogame' width='240px' height='200px' />) :
                (<img src={defaultImage}  alt='new videogame' className={style.image} />)}
                <hr/>
-            
+             */}
             <label className={style.labelLink}>
              {errors.image? <span className={style.error}>{errors.image}</span> :
-            <span  htmlFor="image" className={style.span}>URL IMAGE: </span>}
+            <span  htmlFor="image" className={style.span}>URL Image: </span>}
             <input 
                 name='image'
                 className={style.input}
